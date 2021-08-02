@@ -1,27 +1,48 @@
-#container {
+
+//En esta parte se estructura el diseño de las tarjetas
+
+.farmacias-card {
+  display: flex;
+  flex-direction: column;
+}
+
+ion-col:not(:last-of-type) .farmacias-card {
+  margin-bottom: 0;
+}
+
+.farmacias-card .farmacias-item {
+  --min-height: 85px;
+}
+
+.farmacias-card .farmacias-item h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.farmacias-card .farmacias-item p {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.farmacias-card ion-card-header {
+  padding: 0;
+}
+
+.farmacias-card ion-card-content {
+  flex: 1 1 auto;
+
+  padding: 0;
+}
+.ios ion-list {
+  margin-bottom: 10px;
+}
+
+.md ion-list {
+  border-top: 1px solid var(--ion-color-step-150, #d7d8da);
+
+  padding: 0;
+}
+.centrar {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }

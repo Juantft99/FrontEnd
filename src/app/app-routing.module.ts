@@ -11,6 +11,15 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'activas',
+    loadChildren: () => import('./activas/activas.module').then( m => m.ActivasPageModule)
+  },
+  {
+    path: 'activadetalle/:id',
+    loadChildren: () => import('./activadetalle/activadetalle.module').then( m => m.ActivadetallePageModule)
+  },
+ 
 ];
 
 @NgModule({

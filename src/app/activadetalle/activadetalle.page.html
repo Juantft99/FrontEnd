@@ -1,0 +1,49 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/activas"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="star-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<div *ngIf="farmacia" class="speaker-background">
+  <img [src]="'https://ecuafarma.herokuapp.com' + farmacia.Logo.url" [alt]="farmacia?.Brand">
+  <h2 style=" font-weight:bold;">{{farmacia.Brand}}</h2>
+</div>
+<ion-content> 
+  <ion-list>
+    <ion-item *ngIf="farmacia">
+      <p>
+        Nombre: {{farmacia.Name}}
+        <br>
+        <br>
+        Direccion: {{farmacia.Address}}
+        <br>
+        <br>
+        Contacto: {{farmacia.Contact}}
+        <br>
+        <br>
+        Estado: Abierta
+      </p>
+    </ion-item>
+    <br>
+    <div class="centrar">
+    <ion-chip color="primary">
+      <ion-icon name="logo-twitter"></ion-icon>
+      <ion-label>Twitter</ion-label>
+    </ion-chip>
+
+    <ion-chip color="dark" button>
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-label>Facebook</ion-label>
+    </ion-chip>
+
+    <ion-chip color="danger">
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-label>Instagram</ion-label>
+    </ion-chip> 
+    </div>
+  </ion-list> 
+</ion-content>
